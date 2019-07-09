@@ -10,7 +10,7 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.*;
 
-
+// Base class for initializing webDriver, pageFactory
 public class SeleniumBaseTest {
 	private WebDriver webDriver;
 	private PageFactory pageFactory;
@@ -25,7 +25,6 @@ public class SeleniumBaseTest {
 		webDriver = new ChromeDriver();
 		//webDriver = new FirefoxDriver();
 		pageFactory = new PageFactory();
-		//wait = new Wait(webDriver);
 		actions = new Actions(webDriver);
 
 		//webDriver.navigate().to(url);
@@ -44,10 +43,6 @@ public class SeleniumBaseTest {
 
 	public PageFactory getPageFactory() {
 		return pageFactory;
-	}
-
-	public Wait getWait() {
-		return wait;
 	}
 
 	public Actions getActions() {
